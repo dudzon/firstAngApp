@@ -28,4 +28,8 @@ export class ShoppingListService {
     this.ingredients.push(...ingredients);
     this.ingredientsChanged.emit(this.ingredients.slice());
   }
+  updateIngredient(id: number, newIngredient: Ingredient) {
+    this.ingredients[id] = newIngredient;
+    this.ingredientsChanged.emit(this.ingredients.slice());
+  }
 }
